@@ -1,1 +1,35 @@
 # TUINO ONE
+TUINO ONE is an Arduino Uno compatible board which has been developed for IoT applications, it has the form factor of the Arduino/Genuino Uno but with a series of additional features:
+![TUINO](/docs/tuino-small.jpg?raw=true)
+
+* ATMega1284P processor - which has 192K of FLASH and 16Kb. You can now build much more complex sketches.
+* 5/3.3V switch - use 3.3V sensors without any problems.
+* 4 [GROVE](http://wiki.seeed.cc/Grove_System/) connectors - no need for external shields to add sensors.
+* [RTC](http://www.st.com/en/clocks-and-timers/m41t62.html) with battery back up - always useful in an IoT application.
+* [NFC](http://www.st.com/en/nfc/m24sr04-y.html) chip - leverage NFC connectivity for exchaning information with smart phones.
+* LiPO charging section with [power gauge](https://www.maximintegrated.com/en/products/power/battery-management/MAX17048.html) - you can check the battery level from your sketch.<br/>
+
+##GMX MODULES
+The most important feature we have added is the GMX bus - this is an additional bus that exploits the additional I/O pins of the 1284P and with which you can add different RF modules. - leveraging different technologies for your IoT projects.
+
+[pinout of the GMX]
+
+The available RF GMX boards are:
+
+* GMX-LR1 : LoRaWAN board, based on the [Murata](http://wireless.murata.com/eng/products/rf-modules-1/lpwa/type-abz.html) module
+* GMX-LR1-GPS : LoRaWAN and GPS on same module
+* GMX-BLUE : BLE 4.2 board  
+* GMX-WIFI : WINC1500 based board 
+* GMX-ZIGBEE: ETRX357 based board
+* GMX-WMBUS: 868Mhz and 169Mhz Wireless MBUS board (coming soon)
+* ...and more will come ( NBIoT is the next one...)
+
+The GMX modules - especially the GMX-LR1 or GMX-LR1-GPS can be used standalone, check the [GMX-LR1](https://github.com/gimasi/GMX-LR1) project  more information.<br/>
+Here is a picture:<br/>
+![GMX-LR1](/docs/gmx-lr1-small.jpg?raw=true)
+
+And here the TUINO ONE with the GMX-LR1 board<br/>
+![TUINO-GMX-LR1](/docs/tuino-gmx-lr1-small.jpg?raw=true)
+
+<br/>
+More info coming up very soon... Stay tuned!
