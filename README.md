@@ -12,7 +12,7 @@ TUINO ONE is an Arduino Uno compatible board which has been developed for IoT ap
 ##GMX MODULES
 The most important feature we have added is the GMX bus - this is an additional bus that exploits the additional I/O pins of the 1284P and with which you can add different RF modules. - leveraging different technologies for your IoT projects.<br/>
 Here's the pinout<br/>
-![GMX_PINOUT](/docs/gms_pinout.png?raw=true)
+![GMX_PINOUT](/docs/gmx_pinout.png?raw=true)
 
 The available RF GMX boards are:
 
