@@ -29,7 +29,7 @@ Here is a picture:<br/>
 ![GMX-LR1](/docs/gmx-lr1-small.jpg?raw=true)
 
 And here the TUINO ONE with the GMX-LR1 board<br/>
-![TUINO-GMX-LR1](/docs/tuino-gmx-lr1-small.jpg?raw=true)
+![TUINO-GMX-LR1](/docs/tuino_with_gmx-small.jpg?raw=true)
 
  <br/>
 More info coming up very soon... Stay tuned!
