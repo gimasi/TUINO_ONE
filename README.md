@@ -2,7 +2,7 @@
 TUINO ONE is an Arduino Uno compatible board which has been developed for IoT applications, it has the form factor of the Arduino/Genuino Uno but with a series of additional features:<br/>
 ![TUINO](/docs/tuino-small.jpg?raw=true)
 
-* ATMega1284P processor - which has 192K of FLASH and 16Kb. You can now build much more complex sketches.
+* ATMega1284P processor - which has 192K of FLASH and 16Kb of RAM. You can now build much more complex sketches.
 * 5/3.3V switch - use 3.3V sensors without any problems.
 * 4 [GROVE](http://wiki.seeed.cc/Grove_System/) connectors - no need for external shields to add sensors.
 * [RTC](http://www.st.com/en/clocks-and-timers/m41t62.html) with battery back up - always useful in an IoT application.
@@ -10,9 +10,9 @@ TUINO ONE is an Arduino Uno compatible board which has been developed for IoT ap
 * LiPO charging section with [power gauge](https://www.maximintegrated.com/en/products/power/battery-management/MAX17048.html) - you can check the battery level from your sketch.<br/>
 
 ##GMX MODULES
-The most important feature we have added is the GMX bus - this is an additional bus that exploits the additional I/O pins of the 1284P and with which you can add different RF modules. - leveraging different technologies for your IoT projects.
-
-[pinout of the GMX]
+The most important feature we have added is the GMX bus - this is an additional bus that exploits the additional I/O pins of the 1284P and with which you can add different RF modules. - leveraging different technologies for your IoT projects.<br/>
+Here's the pinout<br/>
+![GMX_PINOUT](/docs/gms_pinout.png?raw=true)
 
 The available RF GMX boards are:
 
@@ -31,5 +31,5 @@ Here is a picture:<br/>
 And here the TUINO ONE with the GMX-LR1 board<br/>
 ![TUINO-GMX-LR1](/docs/tuino-gmx-lr1-small.jpg?raw=true)
 
-<br/>
+ <br/>
 More info coming up very soon... Stay tuned!
