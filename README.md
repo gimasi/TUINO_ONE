@@ -1,5 +1,5 @@
 # TUINO ONE
-TUINO ONE is an Arduino Uno compatible board which has been developed for IoT applications, it has the form factor of the Arduino/Genuino Uno but with a series of additional features:
+TUINO ONE is an Arduino Uno compatible board which has been developed for IoT applications, it has the form factor of the Arduino/Genuino Uno but with a series of additional features:<br/>
 ![TUINO](/docs/tuino-small.jpg?raw=true)
 
 * ATMega1284P processor - which has 192K of FLASH and 16Kb. You can now build much more complex sketches.
