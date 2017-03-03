@@ -1,0 +1,44 @@
+{
+  "packages": [
+    {
+      "maintainer": "Gimasi SA",
+      "websiteURL": "http://www.gimasi.ch",
+      "email": "info@giamsi.ch",
+      "name": "Tuino",
+      "platforms": [
+        {
+          "name": "Tuino AVR Boards",
+          "architecture": "avr",
+          "version": "1.0.0",
+          "category": "Contributed",         
+          "help": {
+            "online": "http://www.tuino.io"
+          },
+          "url": "https://github.com/gimasi/arduino_ide/boards/tuino-1.0.0.tar.bz2",
+          "archiveFileName": "tuino-1.0.0.tar.bz2",
+          "checksum": "SHA256:7EFEBD1578E68DD6ECBFC9CF791B1747B081D4B23465D3B50C798EF8F5017652",
+          "size": "15192",
+          "toolsDependencies": [
+            {
+              "packager": "arduino",
+              "version": "4.8.1-arduino5",
+              "name": "avr-gcc"
+            },
+            {
+              "packager": "arduino",
+              "version": "6.0.1-arduino5",
+              "name": "avrdude"
+            }
+          ],
+          "boards": [
+            {
+              "name": "Tuino 1"
+            }
+          ]
+        },
+      ],
+      "tools": [] 
+    }
+  ]
+}
+
