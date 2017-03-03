@@ -14,7 +14,7 @@
           "help": {
             "online": "http://www.tuino.io"
           },
-          "url": "raw.githubusercontent.com/gimasi/TUINO_ONE/master/arduino_ide/tuino-1.0.0.tar.bz2",
+          "url": "https://raw.githubusercontent.com/gimasi/TUINO_ONE/master/arduino_ide/tuino-1.0.0.tar.bz2",
           "archiveFileName": "tuino-1.0.0.tar.bz2",
           "checksum": "SHA256:7EFEBD1578E68DD6ECBFC9CF791B1747B081D4B23465D3B50C798EF8F5017652",
           "size": "15192",
