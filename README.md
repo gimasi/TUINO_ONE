@@ -38,7 +38,8 @@ https://raw.githubusercontent.com/gimasi/TUINO_ONE/master/arduino_ide/package_tu
 <br/>
 ![ARDUINO-IDE](/docs/arduino_ide.png?raw=true)
 <br>
-You are now ready to add the Tuino 1 to your IDE. Go to Tools->Board->Board Manager and look for the Tuino board, and finally click on install...
+You are now ready to add the Tuino 1 to your IDE.<br/> 
+Go to Tools->Board->Board Manager and look for the Tuino board, and finally click on install...
 <br>
 
 More info coming up very soon... Stay tuned!
