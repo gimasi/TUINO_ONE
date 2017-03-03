@@ -14,10 +14,10 @@
           "help": {
             "online": "http://www.tuino.io"
           },
-          "url": "https://raw.githubusercontent.com/gimasi/TUINO_ONE/master/arduino_ide/tuino-1.0.0.zip",
-          "archiveFileName": "tuino-1.0.0.zip",
-          "checksum": "SHA256:7EFEBD1578E68DD6ECBFC9CF791B1747B081D4B23465D3B50C798EF8F5017652",
-          "size": "15192",
+          "url": "https://raw.githubusercontent.com/gimasi/TUINO_ONE/master/arduino_ide/tuino-1.0.1.zip",
+          "archiveFileName": "tuino-1.0.1.zip",
+          "checksum": "SHA-256:95ADA6413EA18F61AFD6A1018B803DC120A90FA6D03B6BEAD1F6B6C96286565F",
+          "size": "14667",
           "toolsDependencies": [
             {
               "packager": "arduino",
@@ -41,4 +41,5 @@
     }
   ]
 }
+
 
