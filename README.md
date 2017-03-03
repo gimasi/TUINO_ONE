@@ -30,6 +30,15 @@ Here is a picture:<br/>
 
 And here the TUINO ONE with the GMX-LR1 board<br/>
 ![TUINO-GMX-LR1](/docs/tuino_with_gmx-small.jpg?raw=true)
-
  <br/>
+
+ ##Installing the Board on the Arduino IDE
+ Update your Arduino IDE to the latest version](https://www.arduino.cc/en/Main/Software) ( >= 1.6.4 ), go to preferences and add the Tuino Board Manager URL: <br>
+ https://raw.githubusercontent.com/gimasi/TUINO_ONE/master/arduino_ide/package_tuino_index.json<br>
+ <br>
+ ![ARDUINO-IDE](/docs/arduino_ide.png?raw=true)
+ <br>
+ You are now ready to add the Tuino to your IDE. Go to Tools->Board->Board Manager and look for the Tuino board, and finally click on install...
+ <br>
+
 More info coming up very soon... Stay tuned!
