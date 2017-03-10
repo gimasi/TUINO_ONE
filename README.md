@@ -17,16 +17,16 @@ Here is the pinout of the Tuino 1<br/>
 While the Tuino 1 is 100% software compatible with the Arduino Uno, there are two difference's in its hardware pinout on the expansion shield connectors, and this could lead with some compatibility problems with existing shields.<br/>
 
 1. We only have 4 Analog Lines
-*A0
-*A1
-*A2
-*A3
-
-To maintain compatibility with the Arduino Uno shield pinout we added the I2C **SDA** and **SCL** on the **A4** and **A5** pins, but on the ATMega1284P these pins are not analog but only digital, thus we loose two analog inputs and gain two additional digital ones, **D14** and **D15**.<br/>
+  * A0
+  * A1
+  * A2
+  * A3
+   To maintain compatibility with the Arduino Uno shield pinout we added the I2C **SDA** and **SCL** on the **A4** and **A5** pins, but on the ATMega1284P these pins are not analog but only digital, thus we loose two analog inputs and gain two additional digital ones, **D14** and **D15**.<br/>
 <br/>
-2. Pins **D2/INT0** and **D3/INT1**, again due to the pinout of the AtMega1284P, are shared with the second serial. The second serial is used for the **GMX** bus, and in case you are using a GMX module that is interfaced via UART, you cannot use these two pins.
+2. Pins **D2/INT0** and **D3/INT1**, again due to the pinout of the AtMega1284P, are shared with the second serial. 
+   The second serial is used for the **GMX** bus, and in case you are using a GMX module that is interfaced via UART, you cannot use these two pins.
 
-But if you aren't using the GMX bus you have a second serial on the expansion shield pinout and this could be convenient for many project!
+   But if you aren't using the GMX bus you have a second serial on the expansion shield pinout and this could be convenient for many project!
 
 
 ##RTC
