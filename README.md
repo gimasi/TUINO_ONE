@@ -1,6 +1,7 @@
 # TUINO 1
 TUINO 1 is an Arduino Uno compatible board which has been developed for IoT applications, it has the form factor of the Arduino/Genuino Uno but with a series of additional features:<br/>
-![TUINO](/docs/tuino-small.jpg?raw=true)
+<br/>
+<img src="/docs/tuino.jpg"/>
 
 * ATMega1284P processor - which has **128K** of FLASH and **16Kb** of RAM. You can now build much more complex sketches.
 * 5/3.3V switch - use 3.3V sensors without any problem.
