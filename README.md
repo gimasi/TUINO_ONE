@@ -11,7 +11,7 @@ TUINO 1 is an Arduino Uno compatible board which has been developed for IoT appl
 
 ##TUINO 1 PINOUT
 Here is the pinout of the Tuino 1<br/>
-![TUINO_PINOUT]<img src="/docs/tuino_pinout.png"/>
+<img src="/docs/tuino_pinout.png"/>
 
 ##DIFFERENCES WITH ARDUINO UNO
 While the Tuino 1 is 100% software compatible with the Arduino Uno, there are two differences in the hardware pinout on the expansion shield connectors, and this could lead with some compatibility problems with some existing shields.<br/>
@@ -46,7 +46,7 @@ The LiPO charging is driven by the MCP73831. A power gauge chip MAX17048 is pres
 ##GMX MODULES
 The most important feature we have added is the GMX bus - this is an additional bus that exploits the additional I/O pins of the 1284P and with which you can add different RF modules. - leveraging different technologies for your IoT projects.<br/>
 Here's the pinout<br/>
-![GMX_PINOUT]<img src="/docs/gmx_pinout2.png"/>
+<img src="/docs/gmx_pinout2.png"/>
 
 The available RF GMX boards are:
 
