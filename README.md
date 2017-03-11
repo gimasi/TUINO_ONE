@@ -21,6 +21,7 @@ While the Tuino 1 is 100% software compatible with the Arduino Uno, there are tw
   * A1
   * A2
   * A3
+  
   To maintain compatibility with the Arduino Uno shield pinout we added the I2C **SDA** and **SCL** on the **A4** and **A5** pins, but on the ATMega1284P these pins are not analog but only digital, thus we loose two analog inputs and gain two additional digital ones, **D14** and **D15**.<br/>
 <br/>
 2. Pins **D2/INT0** and **D3/INT1**, again due to the pinout of the AtMega1284P, are shared with the second serial. 
