@@ -186,6 +186,7 @@ void gmxLR_Reset(void);
 #LED FEEDBACK
 On the GMX-LR1 module 4 leds are present, 3 are used by the LoRaWAN stack to comunicate to the user it's actual state.<br/>
 Here is a close up of the LEDs<br/>
+<br/>
 <img src="/docs/gmx_lr1_detail_small.png"/>
 <br/>
 * D4 **Blue** Led<br/>
@@ -195,6 +196,6 @@ This led signal a RX event.
 * D2 **Yellow** Led<br/>
 Join status Led.<br/>
 Slow flash interval the GMX_LR1 is Joining.<br/>
-Fast flash interval the GMX_LR1module has Joined.<br/>
+Fast flash interval the GMX_LR1 has Joined.<br/>
 * D1 **Orange** Led<br/>
 User controlled Led with the **gmxLR_Led()** function<br/>
