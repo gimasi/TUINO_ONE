@@ -3,7 +3,7 @@
     {
       "maintainer": "Gimasi SA",
       "websiteURL": "http://www.gimasi.ch",
-      "email": "info@giamsi.ch",
+      "email": "info@gimasi.ch",
       "name": "Tuino",
       "platforms": [
         {
@@ -18,6 +18,11 @@
           "archiveFileName": "tuino-1.0.2.zip",
           "checksum": "SHA-256:70C6F570D40CB96F0B462D4A00F658D8BB4DAA020FF2DF886A7DB4514B2D9957",
           "size": "14667",
+          "boards": [
+            {
+              "name": "Tuino 1"
+            }
+          ],
           "toolsDependencies": [
             {
               "packager": "arduino",
@@ -28,11 +33,6 @@
               "packager": "arduino",
               "version": "6.0.1-arduino5",
               "name": "avrdude"
-            }
-          ],
-          "boards": [
-            {
-              "name": "Tuino 1"
             }
           ]
         }

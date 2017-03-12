@@ -1,5 +1,5 @@
 
-tuino.name=Tuino
+tuino.name=Tuino 1
 tuino.upload.tool=arduino:avrdude
 tuino.upload.protocol=arduino
 tuino.upload.maximum_data_size=16384
