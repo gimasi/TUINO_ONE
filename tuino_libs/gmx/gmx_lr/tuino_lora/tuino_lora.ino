@@ -74,9 +74,15 @@ void setup() {
   Serial.print("Join:");
   Serial.println(join_wait);
   
-    if ( join_wait == 0 )
+    if ( join_wait == 0 ) {
+      // we set again parameters 
+      gmxLR_setDevEui("00:00:00:00:00:00:00:00");
+      gmxLR_setAppEui("00:00:00:00:00:00:00:00");
+      gmxLR_setAppKey("01:02:03:04:05:06:07:08:01:02:03:04:05:06:07:08");
+
       gmxLR_Join();
-    
+    }
+
     join_wait++;
 
     if (!( join_wait % 100 )) {

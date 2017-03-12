@@ -24,12 +24,11 @@ void setup() {
 
 ```
 
-Here the list of functions that our GMX-LR module supports and a quick description.<br/>
-
 
 #MODULE INIT AND LOWAWAN JOIN PARAMETERS
 
-Init the board - you will see all the Leds flashing in sequence when the modules boots. As described above you need to specify the RX callback function in the module init function 
+The board init function will reset and reboot the module and you will see all the leds flashing in sequence at boot.<br/> 
+As described above you need to specify the RX callback function when calling this function. 
 
 ```c
 byte gmxLR_init(void (*function)());
@@ -37,8 +36,8 @@ byte gmxLR_init(void (*function)());
 
 
 Setting up the LoRaWAN parameters for OTAA/ABP and CLASS.
-All keys and EUI ( DevEui, AppEui, AppKey, DevAddr, etc. ) must be specified like a sequence of hex bytes separate by a ':', like this: **00:00:11:99:22:11:22:99**<br/>
-The Class are currently 'A' and 'C'.
+All keys and EUI ( DevEui, AppEui, AppKey, DevAddr, etc. ) must be specified in hex byte sequence separated by a colon ':', like this: **00:00:11:99:22:11:22:99**<br/>
+The Class currently implemented are 'A' and 'C'.
 
 
 ```c
@@ -94,8 +93,15 @@ It's up to your application what to do if if can't join the network for a long t
   Serial.print("Join:");
   Serial.println(join_wait);
   
-    if ( join_wait == 0 )
+    if ( join_wait == 0 ) {
+
+      // we set again parameters 
+      gmxLR_setDevEui("00:00:00:00:00:00:00:00");
+      gmxLR_setAppEui("00:00:00:00:00:00:00:00");
+      gmxLR_setAppKey("01:02:03:04:05:06:07:08:01:02:03:04:05:06:07:08");
+
       gmxLR_Join();
+    }
     
     join_wait++;
 
@@ -147,8 +153,8 @@ byte gmxLR_setRX2DataRate(String rx2dr);
 
 #SENDING AND RECEIVING DATA
 
-You have two functions to transmit data, the first without the port number, which defaults to port 1, and the second if you want to specify the port. The payload **data** must be an hexadecimal string, in the form 00a133b577... If the format is incorrect the function will return an error. This **gmxLR_TXData()** is non blocking and will return immediately, the packet might or might not be sent immediately depending on the available duty cycle slots.<br/>
-While the module will generate an interrupt on every RX packet, you need to call the **gmxLR_RXData()** function to retrieve the paylaod and the port on which it has been received.
+You have two functions to transmit data, the first without the port number, which defaults to port 1, and the second if you want to specify the port.<br/>The payload **data** must be an hexadecimal string, in the form **00a133b577**. If the format is incorrect the function will return an error.<br/> The **gmxLR_TXData()** is non blocking and will return immediately, the packet might or might not be sent immediately depending on the available duty cycle slots.<br/>
+While the module will generate an interrupt on every RX packet, you need to call the **gmxLR_RXData()** function to retrieve the actual payload and the port on which it has been received.
 
 ```c
 byte gmxLR_TXData(String data);
@@ -156,7 +162,7 @@ byte gmxLR_TXData(String data, int port);
 byte gmxLR_RXData(String& data, int *port);
 ```
 
-By default confirmation(acknoledge) is disabled on all transmissions, but you can enable it with the specific functions. If the confirmation is enable you need to call the **gmxLR_getMessageConfirmation()** after a TX to verify if the message has been confirmed.
+By default confirmation (acknowledge) is disabled on all transmissions, but you can enable it with the specific function. If the confirmation is enabled you need to call the **gmxLR_getMessageConfirmation()** after a TX to verify if the message has been confirmed.
 
 
 ```c
@@ -169,7 +175,7 @@ byte gmxLR_getMessageConfirmation(void);
 
 #UTILITIES
 There is the possibility of driving the fourth LED on the GMX-LR1 board. 1 turns if on, 0 turns it off.<br/>
-And as always there is reset function that reboots the module.
+And as always there is reset function that reboots the module, remember after a reboot you need to rispecify the 
 
 ```c
 byte gmxLR_Led(byte led_state);
@@ -177,3 +183,21 @@ byte gmxLR_Led(byte led_state);
 void gmxLR_Reset(void);
 ```
 
+#LED FEEDBACK
+On the GMX-LR1 module 4 leds are present, 3 are used by the LoRaWAN stack to comunicate to the user it's actual state.<br/>
+Here is a close up of the LEDs<br/>
+<img src="/docs/gmx_lr1_detail_small.png"/>
+<br/>
+* D4 **Blue** LED
+This led signal a TX event, its connected to the low level LoRa stack, so just before there is a RadioTX this Led flashes.
+   
+* D3 => Green LED
+This led signal a RX event.
+
+* D2 => Yellow LED
+Join status led:
+Slow flashing means the Module is trying to Join.
+Fast flash the module has Joined.
+
+* D1 => Orange LED
+User controlled Led with the **gmxLR_Led()** function
