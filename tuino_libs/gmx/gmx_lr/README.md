@@ -1,5 +1,5 @@
 # GMX LR
-These are the interface libraries to the GMX LoRa module. The **tuino_lora** folder contains the basic example with the best practice to implmenet a LoRa based project.<br/>
+These are the interface libraries to the GMX LoRa module. The **tuino_lora** folder contains the basic example with the best practice to implement a LoRa based project.<br/>
 Our library is using the Regexp.cpp library from [Nick Gammon](https://github.com/nickgammon/Regexp) which we find really excellent!<br/>
 The GMX LR module is a completely independent STM32L0/SX1276 based module where all the LoRa stack is running and it is interfaced to the Tuino via UART. <br/>There is a complete series of commands that give you access to the low level params of the LoRaWAN stack enabling you to control things like RX1 & RX2 window delays, Join window delays, datarate on the RX2 window and enabling/disabling ADR .<br/>
 Another important feature that we have implemented is that RX is interrupt based, you simply register the callback function with the module initilazation function and you are set. 
