@@ -190,9 +190,9 @@ Here is a close up of the LEDs<br/>
 <img src="/docs/gmx_lr1_detail_small.png"/>
 <br/>
 * D4 **Blue** Led<br/>
-This led signal a TX event, its connected to the low level LoRa stack, so just before there is a RadioTX this Led flashes.
+This led signals a TX event, its connected to the low level LoRa stack, so just before there is a RadioTX this Led flashes.
 * D3 **Green** Led<br/>
-This led signal a RX event.
+This led signals a RX event.
 * D2 **Yellow** Led<br/>
 Join status Led.<br/>
 Slow flash interval the GMX_LR1 is Joining.<br/>
