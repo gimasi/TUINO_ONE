@@ -9,14 +9,14 @@
         {
           "name": "Tuino AVR Boards",
           "architecture": "avr",
-          "version": "1.0.2",
+          "version": "1.0.3",
           "category": "Contributed",         
           "help": {
             "online": "http://www.tuino.io"
           },
-          "url": "https://raw.githubusercontent.com/gimasi/TUINO_ONE/master/arduino_ide/tuino-1.0.2.zip",
-          "archiveFileName": "tuino-1.0.2.zip",
-          "checksum": "SHA-256:FED7D97FF84CA818330FFC89B848C15056BCC1097F094B2C03035DF1A96D7EE6",          
+          "url": "https://raw.githubusercontent.com/gimasi/TUINO_ONE/master/arduino_ide/tuino-1.0.3.zip",
+          "archiveFileName": "tuino-1.0.3.zip",
+          "checksum": "SHA-256:384D79DB4EB8087AD16F669A2E2AC1A63FADFF33DFAD652578A6AF9378A2EA82",          
           "size": "14681",
           "boards": [
             {
