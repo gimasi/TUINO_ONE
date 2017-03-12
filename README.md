@@ -1,4 +1,4 @@
-**If you are Looking for the onboard HW or GMX Modules libraries for the Tuino 1 navigate into the tuino_libs directly and find them there. Have Fun!**
+**If you are Looking for the onboard HW or GMX Modules libraries for the Tuino 1 navigate into the tuino_libs directory and find them there. Have Fun!**
 <br/>
 <br/>
 # TUINO 1
