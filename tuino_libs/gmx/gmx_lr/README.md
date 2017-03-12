@@ -188,16 +188,13 @@ On the GMX-LR1 module 4 leds are present, 3 are used by the LoRaWAN stack to com
 Here is a close up of the LEDs<br/>
 <img src="/docs/gmx_lr1_detail_small.png"/>
 <br/>
-* D4 **Blue** LED
+* D4 **Blue** Led<br/>
 This led signal a TX event, its connected to the low level LoRa stack, so just before there is a RadioTX this Led flashes.
-   
-* D3 => Green LED
+* D3 **Green** Led<br/>
 This led signal a RX event.
-
-* D2 => Yellow LED
-Join status led:
-Slow flashing means the Module is trying to Join.
-Fast flash the module has Joined.
-
-* D1 => Orange LED
-User controlled Led with the **gmxLR_Led()** function
+* D2 **Yellow** Led<br/>
+Join status Led.<br/>
+Slow flash interval the GMX_LR1 is Joining.<br/>
+Fast flash interval the GMX_LR1module has Joined.<br/>
+* D1 **Orange** Led<br/>
+User controlled Led with the **gmxLR_Led()** function<br/>
