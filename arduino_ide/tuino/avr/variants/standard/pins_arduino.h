@@ -22,6 +22,7 @@ static const uint8_t SCK  = 13;
 static const uint8_t SCL= 28;
 static const uint8_t SDA= 29;
 
+
 static const uint8_t LED_BUILTIN = 7;
 
 static const uint8_t D0 = 0;
@@ -39,10 +40,13 @@ static const uint8_t D11 = 11;
 static const uint8_t D12 = 12;
 static const uint8_t D13 = 13;
 
+static const uint8_t D14 = 28;
+static const uint8_t D15 = 29;
+
 
 static const uint8_t GMX_GPIO1 = 14;
 static const uint8_t GMX_GPIO2 = 15;
-static const uint8_t GMP_GPIO3 = 16;
+static const uint8_t GMX_GPIO3 = 16;
 static const uint8_t GMX_GPIO4 = 17;
 static const uint8_t GMX_GPIO5 = 18;
 static const uint8_t GMX_GPIO6 = 19;
