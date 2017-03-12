@@ -4,7 +4,7 @@
       "maintainer": "Gimasi SA",
       "websiteURL": "http://www.gimasi.ch",
       "email": "info@gimasi.ch",
-      "name": "Tuino",
+      "name": "tuino",
       "platforms": [
         {
           "name": "Tuino AVR Boards",
