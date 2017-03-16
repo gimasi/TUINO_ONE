@@ -25,7 +25,7 @@ void setup() {
 ```
 
 
-#MODULE INIT AND LOWAWAN JOIN PARAMETERS
+#MODULE INIT AND LORAWAN JOIN PARAMETERS
 
 The board init function will reset and reboot the module and you will see all the leds flashing in sequence at boot.<br/> 
 As described above you need to specify the RX callback function when calling this function. 

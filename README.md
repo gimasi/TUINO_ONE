@@ -57,6 +57,7 @@ Here's the pinout<br/>
 The available RF GMX boards are:
 
 * GMX-LR1 : LoRaWAN board, based on the [Murata](http://wireless.murata.com/eng/products/rf-modules-1/lpwa/type-abz.html) module
+   The Tuino 1 libraries for the GMX-LR1 are [here](https://github.com/gimasi/TUINO_ONE/tree/master/tuino_libs/gmx/gmx_lr)
 * GMX-LR1-GPS : LoRaWAN and GPS on same module
 * GMX-BLUE : BLE 4.2 board  
 * GMX-WIFI : WINC1500 based board 
