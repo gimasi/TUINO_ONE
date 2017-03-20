@@ -72,6 +72,8 @@
 #define LORA_SF12                     0
 
 
+//#define ENABLE_SET_DEVEUI
+ 
 /*
  * GMX-LR1 Init function
  *  the only parameter is the function for the RxData callback
@@ -84,7 +86,10 @@ byte gmxLR_init(void (*function)());
  */
  
 byte gmxLR_getDevEui(String& devEui);
+
+#ifdef ENABLE_SET_DEVEUI
 byte gmxLR_setDevEui(String devEui);
+#endif
 
 byte gmxLR_getAppEui(String& appEui);
 byte gmxLR_setAppEui(String appEui);

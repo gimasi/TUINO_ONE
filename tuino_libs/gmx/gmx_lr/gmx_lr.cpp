@@ -214,11 +214,13 @@ byte gmxLR_getDevEui(String& devEui)
 }
 
 
+#ifdef ENABLE_SET_DEVEUI
 byte gmxLR_setDevEui(String devEui)
 {
    _sendCmd( "AT+DEUI="+devEui+"\r" );
    return( _parseResponse(dummyResponse) );
 }
+#endif
 
 /* AppEui */
 byte gmxLR_getAppEui(String& appEui)
