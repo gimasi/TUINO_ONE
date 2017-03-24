@@ -25,7 +25,7 @@ void setup() {
 ```
 
 
-#MODULE INIT AND LORAWAN JOIN PARAMETERS
+# MODULE INIT AND LORAWAN JOIN PARAMETERS
 
 The board init function will reset and reboot the module and you will see all the leds flashing in sequence at boot.<br/> 
 As described above you need to specify the RX callback function when calling this function. 
@@ -71,7 +71,7 @@ byte gmxLR_setClass(String lrclass);
 
 
 
-#NETWORK JOIN
+# NETWORK JOIN
 The **gmxLR_Join()** call is non blocking, it will start the join process and return immediately. Your code has to poll the module with the **gmxLR_isNetworkJoined()** to verify if it has actually joined the network. The join procedure will go on forever until a join is achieved.
 
 ```c
@@ -117,7 +117,7 @@ It's up to your application what to do if if can't join the network for a long t
 ```
 
 
-#LOWER LEVEL LORAWAN FUNCTIONS
+# LOWER LEVEL LORAWAN FUNCTIONS
 Here is the list of functions with which you can tune the LoRaWAN stack, actually you shouldn't because it is already on the standard values, but if you really want...<br/>
 
 
@@ -151,7 +151,7 @@ byte gmxLR_setRX2DataRate(String rx2dr);
 ```
 
 
-#SENDING AND RECEIVING DATA
+# SENDING AND RECEIVING DATA
 
 You have two functions to transmit data, the first without the port number, which defaults to port 1, and the second if you want to specify the port.<br/>The payload **data** must be an hexadecimal string, in the form **00a133b577**. If the format is incorrect the function will return an error.<br/> The **gmxLR_TXData()** is non blocking and will return immediately, the packet might or might not be sent immediately depending on the available duty cycle slots.<br/>
 While the module will generate an interrupt on every RX packet, you need to call the **gmxLR_RXData()** function to retrieve the actual payload and the port on which it has been received.
@@ -183,7 +183,7 @@ byte gmxLR_Led(byte led_state);
 void gmxLR_Reset(void);
 ```
 
-#LED FEEDBACK
+# LED FEEDBACK
 On the GMX-LR1 module 4 leds are present, 3 are used by the LoRaWAN stack to comunicate to the user it's actual state.<br/>
 Here is a close up of the LEDs<br/>
 <br/>
