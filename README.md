@@ -18,7 +18,7 @@ Here is the pinout of the Tuino 1<br/>
 <br/>
 <img src="/docs/tuino_pinout.png"/>
 
-##DIFFERENCES WITH ARDUINO UNO
+## DIFFERENCES WITH ARDUINO UNO
 While the Tuino 1 is 100% software compatible with the Arduino Uno, there are two differences in the hardware pinout on the expansion shield connectors, and this could lead with some compatibility problems with some existing shields.<br/>
 
 1. We only have 4 Analog Lines
@@ -39,7 +39,7 @@ While the Tuino 1 is 100% software compatible with the Arduino Uno, there are tw
 The RTC clock is based on the M41T62 chip.<br/>
 <br/>
 
-##NFC
+## NFC
 The Tunio 1 one has an onboard NFC chip and a header to install an NFC antenna. The NFC chip is the M24SR04.<br/>
 <br/>
 
@@ -73,7 +73,7 @@ And here the TUINO ONE with the GMX-LR1 board<br/>
 ![TUINO-GMX-LR1](/docs/tuino_with_gmx-small.jpg?raw=true)
  <br/>
 
-##ADDING TUINO 1 SUPPORT IN THE ARDUINO IDE
+## ADDING TUINO 1 SUPPORT IN THE ARDUINO IDE
 Update your Arduino IDE to the latest [version](https://www.arduino.cc/en/Main/Software) ( >= 1.6.4 ), go to preferences and add the Tuino Board Manager URL: <br/>
 https://raw.githubusercontent.com/gimasi/TUINO_ONE/master/arduino_ide/package_tuino_index.json<br/>
 <br/>
