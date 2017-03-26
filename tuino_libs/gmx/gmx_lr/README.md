@@ -173,7 +173,7 @@ byte gmxLR_getMessageConfirmation(void);
 ```
 
 
-#UTILITIES
+# UTILITIES
 There is the possibility of driving the fourth LED on the GMX-LR1 board. 1 turns if on, 0 turns it off.<br/>
 And as always there is reset function that reboots the module, remember after a reboot you need to rispecify the 
 

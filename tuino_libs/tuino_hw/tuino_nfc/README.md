@@ -9,7 +9,7 @@ We are only implementing in our code the NDEF (NFC Data Exchange Format, if you 
 The original libraries, with full credit to the original authors, are these:
 * [https://github.com/rena2019/ArduinoM24SR](https://github.com/rena2019/ArduinoM24SR)<br/>
 * [https://github.com/don/NDEF](https://github.com/don/NDEF)<br/>
-<br>
+
 ## IMPORTANT
 
 The M24SR can we written by the Tuino and read by an external device, but it can also be written by an external device and the Tuino can read it's content. This is very useful in developing headless IoT sensors ( like most sensors are ) to setup or acquire information from it.<br/>
