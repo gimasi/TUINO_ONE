@@ -13,4 +13,4 @@ The original libraries, with full credit to the original authors, are these:
 ## IMPORTANT
 
 The M24SR can we written by the Tuino and read by an external device, but it can also be written by an external device and the Tuino can read it's content. This is very useful in developing headless IoT sensors ( like most sensors are ) to setup or acquire information from it.<br/>
-The NFC is interrupt driven, so to have the Tuino being alerted when an external device is writes something to the NFC tag you need to connect correcly J4 jumper, and select the GPO output. This is valid for rev b of the current hardware, the next version rev c, will not have this jumper and the interrupt pin will be connected directly to the Tuino CPU.<br/>
+The NFC is interrupt driven, so to have the Tuino being alerted when an external device writes something to the NFC tag you need to connect correcly J4 jumper, and select the GPO output. This is valid for rev b of the current hardware, the next version rev c, will not have this jumper and the interrupt pin will be connected directly to the Tuino CPU.<br/>
