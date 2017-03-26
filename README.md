@@ -13,7 +13,7 @@ TUINO 1 is an Arduino Uno compatible board which has been developed for IoT appl
 * [NFC](http://www.st.com/en/nfc/m24sr04-y.html) chip - leverage NFC for enhanced connectivity with smart phones.
 * LiPO charging section with [power gauge](https://www.maximintegrated.com/en/products/power/battery-management/MAX17048.html) - you can check the battery level from your sketches.<br/>
 
-##TUINO 1 PINOUT
+## TUINO 1 PINOUT
 Here is the pinout of the Tuino 1<br/>
 <br/>
 <img src="/docs/tuino_pinout.png"/>
@@ -35,7 +35,7 @@ While the Tuino 1 is 100% software compatible with the Arduino Uno, there are tw
    But if you aren't using the **GMX** bus you have a second serial on the expansion shield pinout and this could be convenient for many project!
 
 
-##RTC
+## RTC
 The RTC clock is based on the M41T62 chip.<br/>
 <br/>
 
@@ -43,12 +43,12 @@ The RTC clock is based on the M41T62 chip.<br/>
 The Tunio 1 one has an onboard NFC chip and a header to install an NFC antenna. The NFC chip is the M24SR04.<br/>
 <br/>
 
-##LiPO AND POWER GAUGE
+## LiPO AND POWER GAUGE
 The LiPO charging is driven by the MCP73831. A power gauge chip MAX17048 is present on the I2C bus so that you can always keep under control the charge level of the battery.<br/>
 <br/> 
 
 
-##GMX MODULES
+## GMX MODULES
 The most important feature we have added is the GMX bus - this is an additional bus that exploits the additional I/O pins of the 1284P and with which you can add different RF modules. - leveraging different technologies for your IoT projects.<br/>
 Here's the pinout<br/>
 <br/>
