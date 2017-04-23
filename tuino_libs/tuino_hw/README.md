@@ -16,4 +16,7 @@ Remember that the Tuino 1 board extension for the Arduino IDE you have the TUINO
 
 ```
 
+## Battery Gauge - MAX17048
+The chip that is used as battery gauge on the Tuino 1 is the [MAX17048](https://www.maximintegrated.com/en/datasheet/index.mvp/id/7636).<br/>
+You can use this excellent library to read you battery level and state of charghe (SOC) from alikian [https://github.com/alikian/ArduinoLib_MAX17048](https://github.com/alikian/ArduinoLib_MAX17048). Remember that if the battery is not connected the gauge chip will always read 100% since it will read directly chargning voltage.
 
