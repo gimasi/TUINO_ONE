@@ -201,11 +201,11 @@ Fast flash interval the GMX_LR1 has Joined.<br/>
 User controlled Led with the **gmxLR_Led()** function<br/>
 
 # UPDATING FIRMWARE 
-It is possible to update the firmware of the GMX-LR1 module via the Tuino 1 board and USB.<br/>
+It is possible to update the firmware of the GMX-LR1 module via the Tuino 1 board and USB cable.<br/>
 You will need the excellent STM32 Bootloader utility from Tomasz Watorowski, since the [ST](http://www.st.com/en/development-tools/flasher-stm32.html) original one dosen't really work well.<br/> 
-You can find it here [STBootLib](https://github.com/MightyDevices/STBootLib) and the binary is available here [STBootLib windows binary](https://github.com/MightyDevices/STBootLib/releases) - download both the .exe and the .dll. Sorry it's available only for windows!<br/
+You can find it here [STBootLib](https://github.com/MightyDevices/STBootLib) and the binary is available here [STBootLib windows binary](https://github.com/MightyDevices/STBootLib/releases) - download both the .exe and the .dll. It's only available  for windows....<br/>
 <br/>
-You will also need a tiny .ino script that has to be run on the Tuino 1. It simplies set's the STM32L0 cpu of the GMX-LR1 module in Bootloader mode and redirects the USB serial to the GMX-LR1 serial for the external utility to work.<br/>
+You will also need a tiny .ino script that has to be run on the Tuino 1. It simply sets the STM32L0 of the GMX-LR1 module in bootloader mode and redirects the USB serial to the GMX-LR1 serial for the external utility to work.<br/>
 Here is the code - just copy paste it into a new script in the Arduino IDE:
 ```c
 
