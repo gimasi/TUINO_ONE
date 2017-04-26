@@ -199,3 +199,58 @@ Slow flash interval the GMX_LR1 is Joining.<br/>
 Fast flash interval the GMX_LR1 has Joined.<br/>
 * D1 **Orange** Led<br/>
 User controlled Led with the **gmxLR_Led()** function<br/>
+
+# UPDATING FIRMWARE 
+It is possible to update the firmware of the GMX-LR1 module via the Tuino 1 board and USB.<br/>
+You will need the excellent STM32 Bootloader utility from Tomasz Watorowski, since the [ST](http://www.st.com/en/development-tools/flasher-stm32.html) original one dosen't really work well.<br/> 
+You can find it here [STBootLib](https://github.com/MightyDevices/STBootLib) and the binary is available here [STBootLib windows binary](https://github.com/MightyDevices/STBootLib/releases) - download both the .exe and the .dll. Sorry it's available only for windows!<br/
+<br/>
+You will also need a tiny .ino script that has to be run on the Tuino 1. It simplies set's the STM32L0 cpu of the GMX-LR1 module in Bootloader mode and redirects the USB serial to the GMX-LR1 serial for the external utility to work.<br/>
+Here is the code - just copy paste it into a new script in the Arduino IDE:
+```c
+
+void setup() {
+  // put your setup code here, to run once:
+ 
+  Serial.begin(115200,SERIAL_8E1);
+
+  if(Serial1) {
+    Serial1.begin(115200,SERIAL_8E1);
+  } 
+        
+ 
+  // Boot in Bootloader Mode
+  pinMode(GMX_GPIO5,OUTPUT);
+  digitalWrite(GMX_GPIO5,1);
+
+  // Reset 
+  pinMode(GMX_RESET,OUTPUT);
+  digitalWrite(GMX_RESET,HIGH);
+  delay(100);
+  digitalWrite(GMX_RESET,LOW);
+  delay(100);
+  digitalWrite(GMX_RESET,HIGH);
+  delay(500);
+  
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  byte ch;
+
+  if (Serial1.available()>0) 
+  {
+    Serial.write(Serial1.read());
+  }
+
+  if (Serial.available()>0) 
+  {
+    ch = Serial.read();
+    Serial1.write(ch);
+  }
+  
+}
+
+```
+
+We will post regular updates of the GMX-LR1 firmware as new features and/or bugs are added/resolved.
