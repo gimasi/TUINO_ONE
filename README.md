@@ -108,7 +108,7 @@ Go to Tools->Board->Board Manager and look for the Tuino board, and finally clic
 <br>
 
 ## PINS_ARDUINO.H
-Here are the degines of some of the constants defined in the Tuino 1 board file.
+Here the pin definitions in the Tuino 1 board file.
 
 ```c
 
