@@ -18,14 +18,19 @@ TUINO 1 is an Arduino Uno compatible board which has been developed for IoT appl
 ## TUINO 1 PINOUT
 Here is the pinout of the Tuino 1<br/>
 
-# TOP LAYER
+### TOP 
 <img src="/docs/top_layer.png"/>
 
-# BOTTOM LAYER
+### HEADERS
+* J4 - connection for external on/off/reset pushbutton
+* J12 - fitted with header - NFC antenna connection 
+* J13 - connection for external +5V power supply
+* J14 - fitted with header - automatic power on. If jumper is fitted the board turns on automatically as soon as power is supplied.
+* J15 - connection for external LiPO battery
+
+### BOTTOM 
 <img src="/docs/bottom_layer.png"/>
 
-# HEADERS EXPLANATION
-* J14
 
 ## DIFFERENCES WITH ARDUINO UNO
 While the Tuino 1 is 100% software compatible with the Arduino Uno, there are two differences in the hardware pinout on the expansion shield connectors, and this could lead with some compatibility problems with some existing shields.<br/>
@@ -43,19 +48,29 @@ While the Tuino 1 is 100% software compatible with the Arduino Uno, there are tw
 
    But if you aren't using the **GMX** bus you have a second serial on the expansion shield pinout and this could be convenient for many project!
 
+## ATMega1284P Schematic
+Here is the ATMega1284P connection on the Tuino 1 board. For reference and for better understanding of its functionalities.
+
+<img src="/docs/Schematic_cpu_tuino.png"/>
+
 
 ## RTC
 The RTC clock is based on the M41T62 chip.<br/>
+Check the [Tuino HW](https://github.com/gimasi/TUINO_ONE/tree/master/tuino_libs/tuino_hw) section for software drivers.
 <br/>
 
 ## NFC
 The Tunio 1 one has an onboard NFC chip and a header to install an NFC antenna. The NFC chip is the M24SR04.<br/>
+Check the [Tuino HW](https://github.com/gimasi/TUINO_ONE/tree/master/tuino_libs/tuino_hw) section for software drivers.
 <br/>
 
 ## LiPO AND POWER GAUGE
 The LiPO charging is driven by the MCP73831. A power gauge chip MAX17048 is present on the I2C bus so that you can always keep under control the charge level of the battery.<br/>
+Check the [Tuino HW](https://github.com/gimasi/TUINO_ONE/tree/master/tuino_libs/tuino_hw) section for software drivers.
 <br/> 
 
+## microSD Card Slot
+The Tuino 1 is compatible with the [Arduino SD](https://www.arduino.cc/en/reference/SD) library.
 
 ## GMX MODULES
 The most important feature we have added is the GMX bus - this is an additional bus that exploits the additional I/O pins of the 1284P and with which you can add different RF modules. - leveraging different technologies for your IoT projects.<br/>
