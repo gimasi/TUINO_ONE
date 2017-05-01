@@ -34,15 +34,28 @@ As described above you need to specify the RX callback function when calling thi
 byte gmxLR_init(void (*function)());
 ```
 
-
 Setting up the LoRaWAN parameters for OTAA/ABP and CLASS.
 All keys and EUI ( DevEui, AppEui, AppKey, DevAddr, etc. ) must be specified in hex byte sequence separated by a colon ':', like this: **00:00:11:99:22:11:22:99**<br/>
 The Class currently implemented are 'A' and 'C'.
+
+*** IMPORTANT ***
+All production GMX-LR modules with their unique DevEUI that cannot be changed (ie. the gmxLR_setDevEui() function won't work, we can provide a custom firmware if you need to change the DevEUI).<br/> 
+AppEUI and AppKey, for OTA provisioning, come preprogrammed, but can be changed with the respective gmxLR_ function calls. The preprogrammed values follow this pattern:<br/>
+* AppEUI = DevEUI
+* AppKey = two times the DevEUI
+so for example:<br/>
+DevEUI = 78AF580301020304<br/>
+AppEUI = 78AF580301020304<br/>
+AppKEY = 78AF58030102030478AF580301020304
+<br/>
+When you change the AppKey and AppEUI they will stored in the EEPROM of the GMX-LR module and will remain set also after power cycle.<br/>
 
 
 ```c
 
 byte gmxLR_getDevEui(String& devEui);
+
+// only available with special firmware
 byte gmxLR_setDevEui(String devEui);
 
 byte gmxLR_getAppEui(String& appEui);
@@ -175,12 +188,17 @@ byte gmxLR_getMessageConfirmation(void);
 
 # UTILITIES
 There is the possibility of driving the fourth LED on the GMX-LR1 board. 1 turns if on, 0 turns it off.<br/>
-And as always there is reset function that reboots the module, remember after a reboot you need to rispecify the 
+And as always there is reset function that reboots the module, remember after a reboot you need to rejoin the network.<br/>
+The gmxLR_StringToHex() function is useful in converting a RX HEX string to a byte array that is more easy to handle for packet decoding.
+
 
 ```c
 byte gmxLR_Led(byte led_state);
 
 void gmxLR_Reset(void);
+
+void gmxLR_StringToHex(String string, char *data, int *len );
+
 ```
 
 # LED FEEDBACK
