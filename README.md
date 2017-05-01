@@ -107,4 +107,58 @@ You are now ready to add the Tuino 1 to your IDE.<br/>
 Go to Tools->Board->Board Manager and look for the Tuino board, and finally click on install...
 <br>
 
-More info coming up very soon... Stay tuned!
+## PINS_ARDUINO.H
+Here are the degines of some of the constants defined in the Tuino 1 board file.
+
+```c
+
+static const uint8_t SS   = 10;
+static const uint8_t MOSI = 11;
+static const uint8_t MISO = 12;
+static const uint8_t SCK  = 13;
+
+static const uint8_t SCL= 28;
+static const uint8_t SDA= 29;
+
+static const uint8_t LED_BUILTIN = 13;
+
+static const uint8_t D0 = 0;
+static const uint8_t D1 = 1;
+static const uint8_t D2 = 2;
+static const uint8_t D3 = 3;
+static const uint8_t D4 = 4;
+static const uint8_t D5 = 5;
+static const uint8_t D6 = 6;
+static const uint8_t D7 = 7;
+static const uint8_t D8 = 8;
+static const uint8_t D9 = 9;
+static const uint8_t D10 = 10;
+static const uint8_t D11 = 11;
+static const uint8_t D12 = 12;
+static const uint8_t D13 = 13;
+
+static const uint8_t D14 = 28;
+static const uint8_t D15 = 29;
+
+static const uint8_t GMX_GPIO1 = 14;
+static const uint8_t GMX_GPIO2 = 15;
+static const uint8_t GMX_GPIO3 = 16;
+static const uint8_t GMX_GPIO4 = 17;
+static const uint8_t GMX_GPIO5 = 18;
+static const uint8_t GMX_GPIO6 = 19;
+static const uint8_t GMX_GPIO7 = 20;
+static const uint8_t GMX_RESET = 21;
+static const uint8_t GMX_INT   = 31;
+
+static const uint8_t A0 = 24;
+static const uint8_t A1 = 25;
+static const uint8_t A2 = 26;
+static const uint8_t A3 = 27;
+
+static const uint8_t TUINO_INTERRUPT = 30;
+static const uint8_t TUINO_RTC_INTERRUPT = 30;
+static const uint8_t TUINO_NFC_INTERRUPT = 22;
+
+```
+
+If you want to order a Tuino 1 board visit our website [http://www.tuino.io](http://www.tuino.io])
