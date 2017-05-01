@@ -61,7 +61,7 @@ static const uint8_t A3 = 27;
 
 static const uint8_t TUINO_INTERRUPT = 30;
 static const uint8_t TUINO_RTC_INTERRUPT = 30;
-static const uint8_t TUINO_NFC_INTERRUPT = 30;
+static const uint8_t TUINO_NFC_INTERRUPT = 22;
 
 
 #define digitalPinToPCICR(p)    ( (p) >= 0 && (p) < NUM_DIGITAL_PINS ? &PCICR : (uint8_t *)0 )
