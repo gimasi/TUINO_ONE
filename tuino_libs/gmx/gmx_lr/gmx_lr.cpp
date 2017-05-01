@@ -11,7 +11,7 @@
  *  Created on: March 11, 2017
  *      Author: Massimo Santoli
  *      Brief: Tuino 1 interface for GMX-LR module family
- *      Version: 1.0
+ *      Version: 1.1
  *
  *      License: it's free - do whatever you want! ( provided you leave the credits)
  *
@@ -50,8 +50,12 @@ void _resetGMX(byte state){
 
   switch(state){
     case GMX_BOOT0:
+      // for compatibility with preproduction TUINO1 boards - where GPIO6 and GPIO5 where inverted
+      // in the production board REV E onwards the correct pin is GPIO6
       pinMode(GMX_GPIO5,OUTPUT);
       digitalWrite(GMX_GPIO5,0);
+      pinMode(GMX_GPIO6,OUTPUT);
+      digitalWrite(GMX_GPIO6,0);
       break;
   }
 
@@ -74,6 +78,7 @@ void _log(String data )
 
 void _sendCmd(String in) {
   int len = in.length();
+  long int start_timeout;
 
   //  send data
   for (int i=0; i<len; i++) {
@@ -89,7 +94,14 @@ void _sendCmd(String in) {
   
   if ( gmxLR_interface == GMXLR_UART_INTERFACE )
   {
-     while(Serial1.available()==0);
+     start_timeout = millis();
+     while(Serial1.available()==0){
+      if (( millis() - start_timeout ) > GMX_UART_TIMEOUT )
+      {
+        Serial.println("TIMEOUT on :"+in);
+        break;
+      }
+     }
   }
 }
 
@@ -191,9 +203,8 @@ byte gmxLR_init(void( *callback)())
     }
 
     // Setup Interrupt PIN for Rx
-    
-    *digitalPinToPCICR(GMX_INT) = (1<<digitalPinToPCICRbit(GMX_INT));
-    *digitalPinToPCMSK(GMX_INT) = (1 << digitalPinToPCMSKbit(GMX_INT));
+    *digitalPinToPCICR(GMX_INT) |= (1<<digitalPinToPCICRbit(GMX_INT));
+    *digitalPinToPCMSK(GMX_INT) |= (1 << digitalPinToPCMSKbit(GMX_INT));
 
     // set RX callback
     _loraRX = callback;
@@ -659,4 +670,31 @@ void gmxLR_Reset(void){
   delay(GMX_BOOT_DELAY);
  
 }
+
+void gmxLR_StringToHex(String string, char *data, int *len )
+{
+  char tmp[255];
+  char temp[2];
+  int j=0;
+  
+  string.toCharArray(tmp,255);
+
+  for (int i = 0; i < strlen(tmp); i += 2)
+  {
+    strncpy(temp, &tmp[i], 2);
+
+    temp[0] = toupper(temp[0]);    // Convert to upper case
+    temp[1] = toupper(temp[1]);
+    
+    // Convert hex string to numeric:
+    data[j] = (temp[0] <= '9') ? (temp[0] - '0') : (temp[0] - 'A' + 10);
+    data[j] *= 16;
+    data[j] += (temp[1] <= '9') ? (temp[1] - '0') : (temp[1] - 'A' +10);
+
+    j++;
+  }
+
+    *len = j;
+}
+
 

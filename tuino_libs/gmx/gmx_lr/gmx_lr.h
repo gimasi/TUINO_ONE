@@ -39,6 +39,8 @@
 #define GMXLR_SPI_INTERFACE           2
 
 #define GMX_UART_SPEED                9600
+#define GMX_UART_TIMEOUT              3000
+
 #define GMX_BOOT0                     1
 #define GMX_BOOT_DELAY                2000
 
@@ -170,6 +172,7 @@ byte gmxLR_getApplicationSessionKey(String& appsk);
 
 byte gmxLR_Led(byte led_state);
 void gmxLR_Reset(void);
+void gmxLR_StringToHex(String string, char *data, int *len );
 
 
 
