@@ -12,11 +12,20 @@ TUINO 1 is an Arduino Uno compatible board which has been developed for IoT appl
 * [RTC](http://www.st.com/en/clocks-and-timers/m41t62.html) with battery back up - always useful in an IoT application.
 * [NFC](http://www.st.com/en/nfc/m24sr04-y.html) chip - leverage NFC for enhanced connectivity with smart phones.
 * LiPO charging section with [power gauge](https://www.maximintegrated.com/en/products/power/battery-management/MAX17048.html) - you can check the battery level from your sketches.<br/>
+* ON/OFF/RESET [Power Control](http://www.linear.com/product/LTC2955). You can switch on, switch off and reset the Tuino 1 all from 1 single button.
+* SD Card slot - fully compatinle with the [Arduino SD](https://www.arduino.cc/en/reference/SD) library. Store your sensor data on SD card 
 
 ## TUINO 1 PINOUT
 Here is the pinout of the Tuino 1<br/>
-<br/>
-<img src="/docs/tuino_pinout.png"/>
+
+# TOP LAYER
+<img src="/docs/top_layer.png"/>
+
+# BOTTOM LAYER
+<img src="/docs/bottom_layer.png"/>
+
+# HEADERS EXPLANATION
+* J14
 
 ## DIFFERENCES WITH ARDUINO UNO
 While the Tuino 1 is 100% software compatible with the Arduino Uno, there are two differences in the hardware pinout on the expansion shield connectors, and this could lead with some compatibility problems with some existing shields.<br/>
