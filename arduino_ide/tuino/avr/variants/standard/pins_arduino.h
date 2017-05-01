@@ -60,6 +60,8 @@ static const uint8_t A2 = 26;
 static const uint8_t A3 = 27;
 
 static const uint8_t TUINO_INTERRUPT = 30;
+static const uint8_t TUINO_RTC_INTERRUPT = 30;
+static const uint8_t TUINO_NFC_INTERRUPT = 30;
 
 
 #define digitalPinToPCICR(p)    ( (p) >= 0 && (p) < NUM_DIGITAL_PINS ? &PCICR : (uint8_t *)0 )
@@ -217,7 +219,7 @@ static const uint8_t TUINO_INTERRUPT = 30;
 #define PORT_D19 PC       // GMX GPIO6  
 #define PORT_D20 PC       // GMX GPIO7
 #define PORT_D21 PC       // GMX RESET
-#define PORT_D22 PC       // GMX NOT CONNECTED
+#define PORT_D22 PC       // NFC IRQ
 #define PORT_D23 PC       // GMX NOT CONNECTED
 
 #define PORT_D24 PA       // A0
@@ -227,7 +229,7 @@ static const uint8_t TUINO_INTERRUPT = 30;
 #define PORT_D28 PC       // SCL
 #define PORT_D29 PC       // SDA
 
-#define PORT_D30 PB       // INTERNAL INTERUPT
+#define PORT_D30 PB       // RTC INTERUPT
 #define PORT_D31 PB       // GMX_INTERRUPT
 
 // specify port bit for each pin D0-D31
@@ -250,8 +252,8 @@ static const uint8_t TUINO_INTERRUPT = 30;
 #define BIT_D15 5
 #define BIT_D16 6
 #define BIT_D17 7
-#define BIT_D18 3
-#define BIT_D19 4
+#define BIT_D18 4
+#define BIT_D19 3
 #define BIT_D20 5
 #define BIT_D21 2
 #define BIT_D22 6
