@@ -12,9 +12,9 @@ AppKEY = 78AF58030102030478AF580301020304
 <br/>
 When you change the AppKey and AppEUI they will stored in the EEPROM of the GMX-LR module and will remain set also after power cycle.<br/>
 Here a quick explanation of the code:<br/>
-Init Section
+## Init Section
 
-'''
+```c
 // Declare the interrupt callback function for RX
 
 bool data_received=false;
@@ -70,13 +70,13 @@ while((join_status = gmxLR_isNetworkJoined()) != LORA_NETWORK_JOINED) {
 
   };
 
-'''
+```
 
-Main Loop<br/>
+## Main Loop
 
 TX Section
 
-'''
+```c
 
 	...
 	...
@@ -96,11 +96,11 @@ TX Section
   
      timer_millis_lora_tx = millis();
    }
-'''
+```
 
 RX Section - RX section is interrupt driven, when a RX packet arrives the loraRx() callback function is called and the data_received flag is set. We simply will simply test the flag to then read the RX buffer from the GMX-LR module.
 
-'''
+```c
 if (data_received)
    {
    	  // retrive RX data from GMX-LR module. 
@@ -125,6 +125,6 @@ if (data_received)
       // clear flag
       data_received = false;
    }
-'''
+```
 
-The GMX-LR module uses the onboard leds to show it's state and activity, read here for a complete description
+The GMX-LR module uses the onboard leds to show it's state and activity, read [here](../) for a complete description
