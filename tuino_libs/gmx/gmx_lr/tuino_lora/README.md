@@ -75,7 +75,7 @@ while((join_status = gmxLR_isNetworkJoined()) != LORA_NETWORK_JOINED) {
 
 ## Main Loop
 
-TX Section
+TX Data
 
 ```c
 
@@ -99,7 +99,7 @@ TX Section
    }
 ```
 
-RX Section - RX section is interrupt driven, when a RX packet arrives the loraRx() callback function is called and the data_received flag is set. We simply will simply test the flag to then read the RX buffer from the GMX-LR module.
+RX Data. RX is interrupt driven, when a RX packet arrives the loraRx() callback function is called and the data_received flag is set. We  will simply test the flag status to read the RX buffer from the GMX-LR module.
 
 ```c
 if (data_received)
