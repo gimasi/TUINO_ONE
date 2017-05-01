@@ -51,7 +51,7 @@ While the Tuino 1 is 100% software compatible with the Arduino Uno, there are tw
 ## ATMega1284P Schematic
 Here is the ATMega1284P connection on the Tuino 1 board. For reference and for better understanding of its functionalities.
 
-<img src="/docs/Schematic_cpu_tuino.png"/>
+<img src="/docs/schematic_cpu_tuino.png"/>
 
 
 ## RTC
