@@ -1,19 +1,18 @@
 # TUINO LORA
 This is an example sketch that shows the use of the GMX-LR1 library to join, trasmit and receive data via LoRa.</bR>
-You can use it as a blueprint for your LoRa projects and remember to install or copy in the same folder the GMX-LR libraries.
-# CODE DESCRIPTION
-The GMX-LR Module come with a fixed DevEui that cannot be change(*). AppEUI and AppKey for OTA provisioning, come preprogrammed, but can be changed with the gmxLR library calls. The preprogrammed values are:<b/>
+You can use it as a blueprint for your LoRa projects and remember to install or copy in the same folder the GMX-LR libraries.<br/>
+<br/>
+Every GMX-LR1 module come with their unique DevEUI that cannot be changed (we can provide a custom firmware if you need to change the DevEUI).<br/> AppEUI and AppKey, for OTA provisioning, come preprogrammed, but can be changed with the respective gmxLR_ function calls. The preprogrammed values follow this pattern:<br/>
 * AppEUI = DevEUI
-* AppKey = DevEUI,DevEUI
-so for example
-if DevEUI = 78AF580301020304
-then AppEUI = 78AF580301020304 and AppKEY = 78AF58030102030478AF580301020304
-When you change the AppKey and AppEUI they will stored in the EEPROM of the GMX-LR module and will saved also after power cycle.
-
+* AppKey = two times the DevEUI
+so for example:<br/>
+DevEUI = 78AF580301020304<br/>
+AppEUI = 78AF580301020304<br/>
+AppKEY = 78AF58030102030478AF580301020304<br/>
+<br/>
+When you change the AppKey and AppEUI they will stored in the EEPROM of the GMX-LR module and will saved also after power cycle.<br/>
 Here a quick explanation of the code:<br/>
-
 Init Section
-
 '''
 // Declare the interrupt callback function for RX
 
