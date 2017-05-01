@@ -12,6 +12,7 @@ AppKEY = 78AF58030102030478AF580301020304
 <br/>
 When you change the AppKey and AppEUI they will stored in the EEPROM of the GMX-LR module and will remain set also after power cycle.<br/>
 Here a quick explanation of the code:<br/>
+
 ## Init Section
 
 ```c
