@@ -1,3 +1,130 @@
 # TUINO LORA
 This is an example sketch that shows the use of the GMX-LR1 library to join, trasmit and receive data via LoRa.</bR>
 You can use it as a blueprint for your LoRa projects and remember to install or copy in the same folder the GMX-LR libraries.
+# CODE DESCRIPTION
+The GMX-LR Module come with a fixed DevEui that cannot be change(*). AppEUI and AppKey for OTA provisioning, come preprogrammed, but can be changed with the gmxLR library calls. The preprogrammed values are:<b/>
+* AppEUI = DevEUI
+* AppKey = DevEUI,DevEUI
+so for example
+if DevEUI = 78AF580301020304
+then AppEUI = 78AF580301020304 and AppKEY = 78AF58030102030478AF580301020304
+When you change the AppKey and AppEUI they will stored in the EEPROM of the GMX-LR module and will saved also after power cycle.
+
+Here a quick explanation of the code:<br/>
+
+Init Section
+
+'''
+// Declare the interrupt callback function for RX
+
+bool data_received=false;
+
+void loraRx(){
+  data_received = true;
+}
+...
+...
+...
+
+// GMX-LR init pass callback function
+  gmxLR_init(&loraRx);
+
+...
+...
+
+// We now Join the NetWork
+// while loop checking the Join State
+while((join_status = gmxLR_isNetworkJoined()) != LORA_NETWORK_JOINED) {
+
+  
+    if ( join_wait == 0 )
+    {
+     // If AppKey and/or AppEUI are specified set them
+     if (AppEui.length() > 0 )
+      gmxLR_setAppEui(AppEui);
+     if (AppKey.length() > 0 )
+      gmxLR_setAppKey(AppKey);
+
+      // Disable Duty Cycle  ONLY FOR DEBUG!
+      gmxLR_setDutyCycle("0");
+      gmxLR_setClass("C");
+
+	  ...
+	  ...	
+	  ...
+
+	  // Here we trigger the Join Request
+      gmxLR_Join();
+    }
+
+    
+    join_wait++;
+
+    // Not necessary - but we reset everything after a timeout
+    if (!( join_wait % 100 )) {
+      gmxLR_Reset();
+      join_wait = 0;
+    }
+
+    delay(5000);
+
+  };
+
+'''
+
+Main Loop<br/>
+
+TX Section
+
+'''
+
+	...
+	...
+	// check delta TX Timeout
+	delta_lora_tx = millis() - timer_millis_lora_tx;
+   
+   // Transmit Period 
+   if ( delta_lora_tx > timer_period_to_tx) {
+  
+    Serial.println("TX DATA");
+
+  	// Transmit Data - as HEX String
+    gmxLR_TXData("010203");
+
+    ...
+    ...
+  
+     timer_millis_lora_tx = millis();
+   }
+'''
+
+RX Section - RX section is interrupt driven, when a RX packet arrives the loraRx() callback function is called and the data_received flag is set. We simply will simply test the flag to then read the RX buffer from the GMX-LR module.
+
+'''
+if (data_received)
+   {
+   	  // retrive RX data from GMX-LR module. 
+   	  // rx_data is a HEX String
+   	  // port is also returned
+      gmxLR_RXData(rx_data,&port);
+ 
+      // convert HEX String to byte array for simpler packet decoding
+      gmxLR_StringToHex(rx_data, rx_buf, rx_buf_len );
+
+      ...
+      ...
+
+      // simple protocol to turn on and off on board LED
+
+      if ( rx_buf[0] == 0x01 )
+        digitalWrite(LED_BUILTIN,HIGH);
+      else
+        digitalWrite(LED_BUILTIN,LOW);
+        
+      
+      // clear flag
+      data_received = false;
+   }
+'''
+
+The GMX-LR module uses the onboard leds to show it's state and activity, read here for a complete description
