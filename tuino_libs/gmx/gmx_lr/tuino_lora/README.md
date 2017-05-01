@@ -8,11 +8,12 @@ Every GMX-LR1 module come with their unique DevEUI that cannot be changed (we ca
 so for example:<br/>
 DevEUI = 78AF580301020304<br/>
 AppEUI = 78AF580301020304<br/>
-AppKEY = 78AF58030102030478AF580301020304<br/>
+AppKEY = 78AF58030102030478AF580301020304
 <br/>
-When you change the AppKey and AppEUI they will stored in the EEPROM of the GMX-LR module and will saved also after power cycle.<br/>
+When you change the AppKey and AppEUI they will stored in the EEPROM of the GMX-LR module and will remain set also after power cycle.<br/>
 Here a quick explanation of the code:<br/>
 Init Section
+
 '''
 // Declare the interrupt callback function for RX
 
