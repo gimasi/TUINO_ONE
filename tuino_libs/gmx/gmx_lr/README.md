@@ -39,7 +39,7 @@ All keys and EUI ( DevEui, AppEui, AppKey, DevAddr, etc. ) must be specified in 
 The Class currently implemented are 'A' and 'C'.
 
 <b>*** IMPORTANT ***</b><br/>
-All production GMX-LR modules with their unique DevEUI that cannot be changed (ie. the gmxLR_setDevEui() function won't work, we can provide a custom firmware if you need to change the DevEUI).<br/> 
+All production GMX-LR modules come with their unique DevEUI that cannot be changed (ie. the gmxLR_setDevEui() function won't work, we can provide a custom firmware if you need to change the DevEUI).<br/> 
 AppEUI and AppKey, for OTA provisioning, come preprogrammed, but can be changed with the respective gmxLR_ function calls. The preprogrammed values follow this pattern:<br/>
 * AppEUI = DevEUI
 * AppKey = two times the DevEUI
