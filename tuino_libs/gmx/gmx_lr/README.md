@@ -237,8 +237,13 @@ void setup() {
         
  
   // Boot in Bootloader Mode
+  // Preproduction Tuino's used GPIO5 for BOOT0 pin of STM32 Micro
+  // Production version ( rev. E and up ) use instead GPIO6
   pinMode(GMX_GPIO5,OUTPUT);
   digitalWrite(GMX_GPIO5,1);
+  pinMode(GMX_GPIO6,OUTPUT);
+  digitalWrite(GMX_GPIO6,1);
+
 
   // Reset 
   pinMode(GMX_RESET,OUTPUT);
