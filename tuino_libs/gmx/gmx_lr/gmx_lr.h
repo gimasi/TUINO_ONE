@@ -82,6 +82,7 @@
  */
  
 byte gmxLR_init(void (*function)());
+byte gmxLR_getVersion(String& version);
 
 /*
  *  OTAA LoRaWAN Parameters 
@@ -142,6 +143,7 @@ byte gmxLR_getRX2Delay(String& rx2);
 byte gmxLR_setRX2Delay(String rx2);
 byte gmxLR_getRX2DataRate(String& rx2dr);
 byte gmxLR_setRX2DataRate(String rx2dr);
+byte gmxLR_getDataRate(String& dr);
 
 
 /*

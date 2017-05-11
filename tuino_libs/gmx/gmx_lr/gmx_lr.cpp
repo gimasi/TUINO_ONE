@@ -217,6 +217,14 @@ byte gmxLR_init(void( *callback)())
     
 }
 
+/* Version */
+byte gmxLR_getVersion(String& version)
+{
+   _sendCmd( "AT+VER=?\r" );
+   return( _parseResponse(version) );
+}
+
+
 /* DevEui */
 byte gmxLR_getDevEui(String& devEui)
 {
@@ -478,6 +486,11 @@ byte gmxLR_setRX2DataRate(String rx2dr)
   return( _parseResponse(dummyResponse) );
 }
 
+byte gmxLR_getDataRate(String& rx1dr)
+{
+  _sendCmd( "AT+DR=?\r" );
+  return( _parseResponse(rx1dr) );
+}
 
 // TX & RX Data
 

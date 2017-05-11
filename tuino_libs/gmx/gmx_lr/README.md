@@ -34,6 +34,13 @@ As described above you need to specify the RX callback function when calling thi
 byte gmxLR_init(void (*function)());
 ```
 
+for the current version
+
+```c
+byte gmxLR_getVersion(String& version);
+```
+
+
 Setting up the LoRaWAN parameters for OTAA/ABP and CLASS.
 All keys and EUI ( DevEui, AppEui, AppKey, DevAddr, etc. ) must be specified in hex byte sequence separated by a colon ':', like this: **00:00:11:99:22:11:22:99**<br/>
 The Class currently implemented are 'A' and 'C'.
@@ -160,6 +167,10 @@ byte gmxLR_setRX2Delay(String rx2);
 
 byte gmxLR_getRX2DataRate(String& rx2dr);
 byte gmxLR_setRX2DataRate(String rx2dr);
+
+byte gmxLR_getDataRate(String& dr);
+byte gmxLR_setDataRate(String dr);
+
 ```
 
 
