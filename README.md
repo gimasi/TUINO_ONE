@@ -22,7 +22,7 @@ The Board Manager dialog box will appear, type in the search text box the word T
 <img src="/docs/arduino_ide_5.png"><br/><br/>
 8) You are now ready to start working with your first examples<br/>
 9) Here some initial sketches you can start playing with:<br/>
-For the LoRaWAN GMX-LR1 see [here](<br/>
+For the LoRaWAN GMX-LR1 see [here](https://github.com/gimasi/TUINO_ONE/tree/master/tuino_libs/gmx/gmx_lr/tuino_lora)<br/>
 For the GMX-NBIoT module see [here](https://github.com/gimasi/GMX-NBIOT/tree/master/tuino_nbiot/)<br/><br>
 
 # TUINO 1
