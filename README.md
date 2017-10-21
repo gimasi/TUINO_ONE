@@ -99,28 +99,17 @@ The Tuino 1 is compatible with the [Arduino SD](https://www.arduino.cc/en/refere
 
 ## GMX MODULES
 The most important feature we have added is the GMX bus - this is an additional bus that exploits the additional I/O pins of the 1284P and with which you can add different RF modules. - leveraging different technologies for your IoT projects.<br/>
-Here's the pinout<br/>
-<br/>
-<img src="/docs/gmx_pinout2.png"/>
+For a complete description on the GMX bus read [here](https://github.com/gimasi/GMX)<br/>
 
-The available RF GMX boards are:
+Different modules are available ( some only as prototypes so please contact us if you are interested ):<br>
+* LoRaWAN [GMX-LR1](https://github.com/gimasi/GMX_LR1_AT_MODEM)  <b>available</b><br/>
+* LoRaWAN + GPS [GMX-LR1-GPS](https://github.com/gimasi/GMX-LR1-GPS) prototype<br/>
+* NBIoT [GMX-NBIoT](https://github.com/gimasi/GMX-NBIOT) <b>available</b><br/>
+* LTE-CATM1 [GMX-CATM1](https://github.com/gimasi/GMX-CATM1-NB1) prototype <br/>
+* WMBUS 868Mhz [GMX-WMBUS]() (prototype)<br/>
+* WiFi [GMX-WIFI](https://github.com/gimasi/GMX-WIFI) (prototype)<br/>
+* ZigBee [GMX-ZIGBEE](https://github.com/gimasi/GMX-ZIGBEE) (prototype)<br/>
 
-* GMX-LR1 : LoRaWAN board, based on the [Murata](http://wireless.murata.com/eng/products/rf-modules-1/lpwa/type-abz.html) module
-   The Tuino 1 libraries for the GMX-LR1 are [here](https://github.com/gimasi/TUINO_ONE/tree/master/tuino_libs/gmx/gmx_lr)
-* GMX-LR1-GPS : LoRaWAN and GPS on same module
-* GMX-BLUE : BLE 4.2 board  
-* GMX-WIFI : WINC1500 based board 
-* GMX-ZIGBEE: ETRX357 based board
-* GMX-WMBUS: 868Mhz and 169Mhz Wireless MBUS board (coming soon)
-* ...and more will come ( NBIoT is the next one...)
-
-The GMX modules - especially the GMX-LR1 or GMX-LR1-GPS can be used standalone, check the [GMX-LR1](https://github.com/gimasi/GMX-LR1) project  more information.<br/>
-Here is a picture:<br/>
-![GMX-LR1](/docs/gmx-lr1-small.jpg?raw=true)
-
-And here the TUINO ONE with the GMX-LR1 board<br/>
-![TUINO-GMX-LR1](/docs/tuino_with_gmx-small.jpg?raw=true)
- <br/>
 
 ## ADDING TUINO 1 SUPPORT IN THE ARDUINO IDE
 Update your Arduino IDE to the latest [version](https://www.arduino.cc/en/Main/Software) ( >= 1.6.4 ), go to preferences and add the Tuino Board Manager URL: <br/>
