@@ -1,5 +1,8 @@
+<hr>
 **If you are Looking for the onboard HW or GMX Modules libraries for the Tuino 1 navigate into the tuino_libs directory and find them there. Have Fun!**
+<hr/>
 # QUICK SETUP
+
 To start using the Tuino 1 you need to install the Arduino IDE ( >= 1.6.4 ).<br/> 
 Find the latest version on the official Arduino website [www.arduino.cc(https://www.arduino.cc/)].<br/>
 Once you have installed the IDE you need to load the board manager file for the Tuino 1. Here the steps:<br/>
@@ -27,10 +30,9 @@ The Board Manager dialog box will appear, type in the search text box the word T
 <img src="/docs/arduino_ide_5.png">
 <br/>
 8) You are now ready to start working with your first examples<br/>
-9) An initial code template for the GMX-LR1 LoRaWAN Module is [here](https://github.com/gimasi/TUINO_ONE/tree/master/tuino_libs/gmx/gmx_lr/tuino_lora)<br/>
+9) [Here](https://github.com/gimasi/TUINO_ONE/tree/master/tuino_libs/gmx/gmx_lr/tuino_lora) you can find an initial code template for the GMX-LR1 LoRaWAN Module.<br/>
 <br/>
 <br/>
-<hr/>
 
 # TUINO 1
 
