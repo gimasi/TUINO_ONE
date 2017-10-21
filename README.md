@@ -13,18 +13,21 @@ Once you have installed the IDE you need to load the board manager file for the 
 <img src="/docs/arduino_ide_2.png">
 <br/>
 4) Click Ok.<br/>
-5) Now to go to the 'Tools' menu, select the 'Board…'' menu item, another menu will open on the right, select ‘Boards Manager’<br/>
+5) Now to go to the '<b>Tools</b>' menu, select the '<b>Board…</b>'' menu item, another menu will open on the right, select ‘<b>Boards Manager</b>’<br/>
 <br/>
 <img src="/docs/arduino_ide_3.png">
 <br/>
-The Board Manager dialog box will appear, type in the search text box the word Tuino. The Tuino board files will appear, click on the text to select it and the 'Install' button will appear.<br/>
+The Board Manager dialog box will appear, type in the search text box the word Tuino. The Tuino board files will appear, click on the text to select it and the '<b>Install</b>' button will appear.<br/>
 <br/>
 <img src="/docs/arduino_ide_4.png">
 <br/>
 6) Click Install... Once the installation has finished you can close the dialog.<br/>
-7) Reopen the 'Tool' menu, select the 'Board...' menu item, on the menu that opens on the right you should see at the bottom the 'Tuino 1'... Select it
-8) You are now ready to start working with your first examples
-9) Some examples are available here:
+7) Reopen the '<b>Tool</b>' menu, select the '<b>Board...</b>' menu item, on the menu that opens on the right you should see at the bottom the '<b>Tuino 1</b>'... Select it<br/>
+<br/>
+<img src="/docs/arduino_ide_5.png">
+<br/>
+8) You are now ready to start working with your first examples<br/>
+9) Some examples are available here:<br/>
 
 <br/>
 <br/>
