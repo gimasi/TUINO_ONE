@@ -5,7 +5,7 @@
 # QUICK SETUP
 
 To start using the Tuino 1 you need to install the Arduino IDE ( >= 1.6.4 ).<br/> 
-Find the latest version on the official Arduino website [www.arduino.cc(https://www.arduino.cc/)].<br/>
+Find the latest version on the official Arduino website [www.arduino.cc](https://www.arduino.cc/).<br/>
 Once you have installed the IDE you need to load the board manager file for the Tuino 1. Here the steps:<br/>
 1) Launch the Arduino IDE<br/>
 2) Open the Menu File, and go to Preferences<br/> 
