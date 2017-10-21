@@ -7,10 +7,15 @@
 To start using the Tuino 1 you need to install the Arduino IDE ( >= 1.6.4 ).<br/> 
 Find the latest version on the official Arduino website [www.arduino.cc](https://www.arduino.cc/).<br/>
 Once you have installed the IDE you need to load the board manager file for the Tuino 1. Here the steps:<br/>
-1) Launch the Arduino IDE<br/>
-2) Open the Menu File, and go to Preferences<br/> 
-<br/>
 `https://raw.githubusercontent.com/gimasi/TUINO_ONE/master/arduino_ide/package_tuino_index.json`
+
+1) Launch the Arduino IDE<br/>
+`https://raw.githubusercontent.com/gimasi/TUINO_ONE/master/arduino_ide/package_tuino_index.json`
+
+2) Open the Menu File, and go to Preferences<br/> 
+`https://raw.githubusercontent.com/gimasi/TUINO_ONE/master/arduino_ide/package_tuino_index.json`
+
+<br/>
 <img src="/docs/arduino_ide_1.png">
 `https://raw.githubusercontent.com/gimasi/TUINO_ONE/master/arduino_ide/package_tuino_index.json`
 <br/>
