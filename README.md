@@ -99,16 +99,16 @@ The Tuino 1 is compatible with the [Arduino SD](https://www.arduino.cc/en/refere
 
 ## GMX MODULES
 The most important feature we have added is the GMX bus - this is an additional bus that exploits the additional I/O pins of the 1284P and with which you can add different RF modules. - leveraging different technologies for your IoT projects.<br/>
-For a complete description on the GMX bus read [here](https://github.com/gimasi/GMX)<br/>
+For a complete description on the <b>GMX</b> bus read [here](https://github.com/gimasi/GMX)<br/>
 
 Different modules are available ( some only as prototypes so please contact us if you are interested ):<br>
-* LoRaWAN [GMX-LR1](https://github.com/gimasi/GMX_LR1_AT_MODEM)  <b>available</b><br/>
-* LoRaWAN + GPS [GMX-LR1-GPS](https://github.com/gimasi/GMX-LR1-GPS) prototype<br/>
-* NBIoT [GMX-NBIoT](https://github.com/gimasi/GMX-NBIOT) <b>available</b><br/>
-* LTE-CATM1 [GMX-CATM1](https://github.com/gimasi/GMX-CATM1-NB1) prototype <br/>
-* WMBUS 868Mhz [GMX-WMBUS]() (prototype)<br/>
-* WiFi [GMX-WIFI](https://github.com/gimasi/GMX-WIFI) (prototype)<br/>
-* ZigBee [GMX-ZIGBEE](https://github.com/gimasi/GMX-ZIGBEE) (prototype)<br/>
+* LoRaWAN [GMX-LR1](https://github.com/gimasi/GMX_LR1_AT_MODEM) - <b>Available</b><br/>
+* LoRaWAN + GPS [GMX-LR1-GPS](https://github.com/gimasi/GMX-LR1-GPS) - Prototype<br/>
+* NBIoT [GMX-NBIoT](https://github.com/gimasi/GMX-NBIOT) - <b>Available</b><br/>
+* LTE-CATM1 [GMX-CATM1](https://github.com/gimasi/GMX-CATM1-NB1) - Prototype <br/>
+* WMBUS 868Mhz [GMX-WMBUS]() - Prototype<br/>
+* WiFi [GMX-WIFI](https://github.com/gimasi/GMX-WIFI) - Prototype<br/>
+* ZigBee [GMX-ZIGBEE](https://github.com/gimasi/GMX-ZIGBEE) - Prototype<br/>
 
 
 ## ADDING TUINO 1 SUPPORT IN THE ARDUINO IDE
