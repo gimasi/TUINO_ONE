@@ -225,6 +225,20 @@ byte gmxLR_getVersion(String& version)
 }
 
 
+/* Region */
+void gmxLR_getRegion(String &region) 
+{
+   _sendCmd( "AT+REG=?\r" );
+   return( _parseResponse(region) );  
+}
+
+void gmxLR_setRegion(String region);
+{
+    _sendCmd( "AT+REG="+region+"\r" );
+   return( _parseResponse(dummyResponse) );
+}
+
+
 /* DevEui */
 byte gmxLR_getDevEui(String& devEui)
 {

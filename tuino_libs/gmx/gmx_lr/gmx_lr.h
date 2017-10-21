@@ -84,6 +84,10 @@
 byte gmxLR_init(void (*function)());
 byte gmxLR_getVersion(String& version);
 
+byte gmxLR_getRegion(String &region); 
+byte gmxLR_setRegion(String region);
+
+
 /*
  *  OTAA LoRaWAN Parameters 
  */
