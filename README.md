@@ -32,8 +32,8 @@ The Board Manager dialog box will appear, type in the search text box the word T
 <br/>
 8) You are now ready to start working with your first examples<br/>
 9) Here some initial sketches you can start playing with:<br/>
-<b>GMX-LR1 [LoRaWAN](oso)</b><br/>
-<b>[GMX-NBIoT](oikki) with Deutsche Telekom configuration](https://github.com/gimasi/GMX-NBIOT/tree/master/tuino_nbiot/)<br/>
+GMX-LR1 [LoRaWAN](oso)<br/>
+[GMX-NBIoT](oikki) with Deutsche Telekom configuration](https://github.com/gimasi/GMX-NBIOT/tree/master/tuino_nbiot/)<br/>
 <br/>
 <br/>
 
