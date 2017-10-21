@@ -28,9 +28,9 @@ The Board Manager dialog box will appear, type in the search text box the word T
 <br/>
 8) You are now ready to start working with your first examples<br/>
 9) Some examples are available here:<br/>
-
 <br/>
 <br/>
+<hr/>
 # TUINO 1
 TUINO 1 is an Arduino Uno compatible board which has been developed for IoT applications, it has the form factor of the Arduino/Genuino Uno but with a series of additional features:<br/>
 <br/>
