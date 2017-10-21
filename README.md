@@ -5,15 +5,23 @@ Find the latest version on the official Arduino website [www.arduino.cc(https://
 Once you have installed the IDE you need to load the board manager file for the Tuino 1. Here the steps:<br/>
 1) Launch the Arduino IDE<br/>
 2) Open the Menu File, and go to Preferences<br/> 
+<br/>
 <img src="/docs/arduino_ide_1.png">
+<br/>
 3) Inside the dialog that appears, go to the 'Additional Boards Manager URLs' text box and copy the following URL inside the text box: https://raw.githubusercontent.com/gimasi/TUINO_ONE/master/arduino_ide/package_tuino_index.json<br/>
+<br/>
 <img src="/docs/arduino_ide_2.png">
-4) Click Ok.
+<br/>
+4) Click Ok.<br/>
 5) Now to go to the 'Tools' menu, select the 'Board…'' menu item, another menu will open on the right, select ‘Boards Manager’<br/>
+<br/>
 <img src="/docs/arduino_ide_3.png">
-The Board Manager dialog box will appear, type in the search text box the word Tuino. The Tuino board files will appear, click on the text to select it and the 'Install' button will appear.
+<br/>
+The Board Manager dialog box will appear, type in the search text box the word Tuino. The Tuino board files will appear, click on the text to select it and the 'Install' button will appear.<br/>
+<br/>
 <img src="/docs/arduino_ide_4.png">
-6) Click Install... Once the installation has finished you can close the dialog.
+<br/>
+6) Click Install... Once the installation has finished you can close the dialog.<br/>
 7) Reopen the 'Tool' menu, select the 'Board...' menu item, on the menu that opens on the right you should see at the bottom the 'Tuino 1'... Select it
 8) You are now ready to start working with your first examples
 9) Some examples are available here:
