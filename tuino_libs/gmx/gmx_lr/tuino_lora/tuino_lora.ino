@@ -8,10 +8,10 @@
 
  * tuino_lora.ino
  *
- *  Created on: April 30, 2017
+ *  Created on: October 11, 2017
  *      Author: Massimo Santoli
  *      Brief: Example Sketch to use LoRa GMX-LR1 Module
- *      Version: 1.1
+ *      Version: 1.2
  *
  *      License: it's free - do whatever you want! ( provided you leave the credits)
  *
@@ -36,10 +36,15 @@ void setup() {
   String DevEui;
   String AppEui;
   String AppKey;
+  String NewAppEui;
+  String NewAppKey;
   String _AppEui;
   String _AppKey;
-  String loraClass;
- 
+  String loraClass,LoRaWANClass;
+  String version;
+
+  char string[64];
+
   String adr,dcs,dxrate;
 
   byte join_status;
@@ -53,10 +58,16 @@ void setup() {
   // GMX-LR init pass callback function
   gmxLR_init(&loraRx);
 
-  // Set AppEui and AppKey 
-  // Uncomment if you want to change from default settings
-  // AppEui = "00:00:00:00:00:00:00:00";
-  // AppKey = "6d:41:46:39:67:4e:30:56:46:4a:62:4c:67:30:58:33";
+  gmxLR_getVersion(version);
+  Serial.println("GMXLR Version:"+version);
+
+  // Set AppEui and AppKey
+  // Uncomment these if you want to change the default keys
+  
+  // NewAppEui = "00:00:00:00:00:00:00:00";
+  // NewAppKey = "6d:41:46:39:67:4e:30:56:46:4a:62:4c:67:30:58:33";
+
+  LoRaWANClass = "C";
 
   Serial.println("Joining...");
   join_wait = 0; 
@@ -65,15 +76,46 @@ void setup() {
   
     if ( join_wait == 0 )
     {
-     // If AppKey and/or AppEUI are specified set them
-     if (AppEui.length() > 0 )
-      gmxLR_setAppEui(AppEui);
-     if (AppKey.length() > 0 )
-      gmxLR_setAppKey(AppKey);
+
+     gmxLR_getAppEui(AppEui);
+     if (NewAppEui.length() > 0 )
+     {
+        AppEui.trim();
+        
+        Serial.println("**** UPDATING AppEUI ****");
+        if ( !AppEui.equals(NewAppEui) )
+        {
+          Serial.println("Setting AppEui:"+NewAppEui);
+          gmxLR_setAppEui(NewAppEui);
+        }
+        else
+        {
+          Serial.println("AppEui is already:"+AppEui);
+        }
+    }
+
+    gmxLR_getAppKey(AppKey);
+    if (NewAppKey.length() > 0 )
+    {
+      AppKey.trim();
+      
+      Serial.println("**** UPDATING AppKey ****");
+      if ( !AppKey.equals(NewAppKey) )
+      {
+          Serial.println("Setting AppKey:"+NewAppKey);
+          gmxLR_setAppKey(NewAppKey);
+      }
+      else
+      {
+          Serial.println("AppKey is already:"+AppKey);
+      }
+    }  
     
       // Disable Duty Cycle  ONLY FOR DEBUG!
       gmxLR_setDutyCycle("0");
-      gmxLR_setClass("C");
+
+      // Set LoRaWAN Class
+      gmxLR_setClass(LoRaWANClass);
 
       Serial.println("LoRaWAN Params:");
       gmxLR_getDevEui(DevEui);
