@@ -11,18 +11,10 @@ Once you have installed the IDE you need to load the board manager file for the 
 2) Open the Menu File, and go to Preferences<br/> 
 <img src="/docs/arduino_ide_1.png"><br/>
 3) Inside the dialog that appears, go to the 'Additional Boards Manager URLs' text box and copy the following URL inside the text box: `https://raw.githubusercontent.com/gimasi/TUINO_ONE/master/arduino_ide/package_tuino_index.json`<br/>
-<br/>
-`https://raw.githubusercontent.com/gimasi/TUINO_ONE/master/arduino_ide/package_tuino_index.json`
-<img src="/docs/arduino_ide_2.png">
-`https://raw.githubusercontent.com/gimasi/TUINO_ONE/master/arduino_ide/package_tuino_index.json`
-<br/>
-`https://raw.githubusercontent.com/gimasi/TUINO_ONE/master/arduino_ide/package_tuino_index.json`
+<img src="/docs/arduino_ide_2.png"><br/>
 4) Click Ok.<br/>
-`https://raw.githubusercontent.com/gimasi/TUINO_ONE/master/arduino_ide/package_tuino_index.json`
 5) Now to go to the '<b>Tools</b>' menu, select the '<b>Board…</b>'' menu item, another menu will open on the right, select '<b>Boards Manager</b>'<br/>
-<br/>
-<img src="/docs/arduino_ide_3.png">
-<br/>
+<img src="/docs/arduino_ide_3.png"><br/>
 The Board Manager dialog box will appear, type in the search text box the word Tuino. The Tuino board files will appear, click on the text to select it and the '<b>Install</b>' button will appear.<br/>
 <br/>
 <img src="/docs/arduino_ide_4.png">
