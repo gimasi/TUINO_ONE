@@ -14,8 +14,6 @@ Once you have installed the IDE you need to load the board manager file for the 
 
 2) Open the Menu File, and go to Preferences<br/> 
 `https://raw.githubusercontent.com/gimasi/TUINO_ONE/master/arduino_ide/package_tuino_index.json`
-
-<br/>
 <img src="/docs/arduino_ide_1.png">
 `https://raw.githubusercontent.com/gimasi/TUINO_ONE/master/arduino_ide/package_tuino_index.json`
 <br/>
