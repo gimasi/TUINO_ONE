@@ -1,6 +1,7 @@
 <hr>
-**If you are Looking for the onboard HW or GMX Modules libraries for the Tuino 1 navigate into the tuino_libs directory and find them there. Have Fun!**
+**<b>If you are Looking for the onboard HW or GMX Modules libraries for the Tuino 1 navigate into the tuino_libs directory and find them there. Have Fun!</b>**
 <hr/>
+
 # QUICK SETUP
 
 To start using the Tuino 1 you need to install the Arduino IDE ( >= 1.6.4 ).<br/> 
